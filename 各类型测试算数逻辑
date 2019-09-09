@@ -1,0 +1,17 @@
+<script>
+    // var a = b = c = d = '';
+    a = true;
+    b = false;
+    c = null;
+    d = undefined;
+    e = new Object;
+    f = 0;
+    g = 1;
+
+    function aa(a, b) {
+        return a * b;//换各种符号测试
+    }
+    console.log(aa(
+        f, e//参数
+    ), f, e);
+</script>
