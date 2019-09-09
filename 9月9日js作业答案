@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1、 找出1到100之间的素数？
+        // 1）
+        for (var k = 3; k <= 100; k++) {
+            var b = true; //假定为素数
+            for (var i = 2; i <= k - 1; i++) {
+                if (k % i == 0) { //能整除
+                    //不是素数
+                    b = false;
+                    break;
+                }
+            }
+            if (b) {
+                console.log(k);
+            }
+        }
+        // 2）
+        for (var k = 3; k <= 100; k++) {
+            var count = 0; //假定为素数
+            for (var i = 1; i <= k; i++) {
+                if (k % i == 0) { //能整除
+                    count++;
+                }
+            }
+            if (count == 2) {
+                console.log(k);
+            }
+        }
+
+        // 2. 计算1!+.... + 10!
+        //     1)
+        // var sum = 0;
+        // for (var j = 1; j <= 10; j++) {
+        //     var c = 1;
+        //     for (var i = 1; i <= j; i++) {
+        //         c *= i;
+        //     }
+        //     sum += c;
+        // }
+        // console.log(sum);
+        var sum = 0;
+        for (var j = 1; j <= 10; j++) {
+            var c = 1;
+            for (var i = 1; i <= j; i++) {
+                c *= i;
+            }
+            sum += c;
+        }
+        console.log(sum);
+        4037913
+        // 2)
+        var sum = 0;
+        var c = 1;
+        for (var i = 1; i <= 10; i++) {
+            c *= i;
+            sum += c;
+        }
+        console.log(sum);
+
+        // 程序分析：
+        // sum = 0, c = 1;
+        // i = 1;
+        // i <= 10 c = c * i sum = sum + c i++
+        //     1. 1 <= 10 c = 1 * 1 = 1 sum = 1!i(2)
+        // 2. 2 <= 10 c = 1 * 2 = 2!sum = 1!+2!i(3)
+        // 3. 3 <= 10 c = 2! * 3 = 3!sum = 1!+2!+3!i(4)
+    </script>
+</body>
+
+</html>
