@@ -1,0 +1,44 @@
+C:\Program Files\MySQL\MySQL Server 5.5\bin
+
+常用dos目录命令：
+dir：显示某个目录下的子目录与文件。
+    格式：dir [x:] [Path] [filename][ parameter]
+    参数解释：
+    /a      显示所有文件夹与文件。
+    /p     分页显示。
+    /w    以宽格式显示列表。
+    /q     显示文件所有权信息。
+2. tree：以树状形状显示目录结构。
+    格式：tree [x:][path][parameter]
+    参数解释：
+    /a      指定tree使用字符而不是图形字符显示链接子目录的行
+    /f      显示每个目录中的文件名
+3. cd：进入或退出目录
+    格式：cd [[/d][x:][path][..]]
+    参数解释：
+    ..      进入上一级目录
+    /d     快速改变当前目录
+    /？    在命令符显示帮助信息
+    \        回到根目录
+4. md：建立目录
+    格式： md [x:]path
+5. rd：从指定位置删除子目录
+    格式：rd [x:]path[/s][/q]
+    参数解释：
+    /s      删除指定目录以及指定目录所有的目录与文件。
+    /q     不经确认即删除目录。
+6. path：设置可执行文件的搜索路径
+    格式：path [[%path%][x:]path[;]……]
+    ；    分隔命令路径中的目录
+    %path%   指定windows xp将命令路径添加到path环境变量中列出的现有目录集中。
+7. xcpoy：复制目录和目录下的所有文件夹与文件到指定的目录位置。
+    格式：xcopy source [destination][/s][/e][/v]
+    参数解释：
+    /s      复制非空的文件。
+    /v     在写入目标文件时验证每个文件。
+    /e      即使子目录是空的也要复制
+8. ren：对某个目录进行重命名
+    格式：ren [x:][path]filename1 filename2
+    参数解释：
+    [x:][path]filename1         指定要重命名的文件夹或文件的位置和名称
+    Filename2  
