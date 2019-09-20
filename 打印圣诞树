@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
+</head><!-- 111
+         111
+         111
+
+         2 2 2
+         2 2 2 
+         2 2 2
+
+         33333 33333 33333
+         33333 33333 33333
+         33333 33333 33333
+
+           4     4     4   
+          444   444   444
+         44444 44444 44444
+         分为四步,这是简化思想
+    
+    -->
 
 <body>
     <script>
