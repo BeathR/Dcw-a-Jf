@@ -1,0 +1,157 @@
+大作业：网页游戏
+每个人确定做什么游戏，可以组队。准备游戏资源。 国庆后检查
+
+复习：
+各种类型的运算规则：
+一、自增自减（++/--）
+  1.字符串：包含有效数字时 ，先转换为数值型，非有效数字，结果为NaN
+  2.布尔型：false转换为0，true转换为1，再增减
+  3.对象型：调用对象的valueOf方法，转换为数字型，如果是字符串，则转换为NaN，
+        var p = {
+            name: "ada",
+            age: 21,
+            valueOf: function() {
+                return this.name;
+            }
+
+        };
+        p++;
+        alert(p);
+二、逻辑运算
+ 1.非运算！
+  1）对象型：返回false
+  2) 字符串：空串 true，非空串false
+  3）数字型：非零（含Infinity） false 零 true
+  4）null/NaN/Undefined：true
+ 2.与&&
+  1）对象型：返回第二个对象，除非第一个是false，则返回false
+       /*var a = {
+            name: "aaa"
+        };*/
+        var a = false;
+        var b = {
+            name: "bbb"
+        };
+        var c = a && b;
+        alert(c);
+  2）null:null
+  3) NaN:NaN
+  4)Undefined:undefined
+ 3.或||
+  1）对象型：返回第一个对象，除非第一个是false,返回第二个对象 
+        /*var a = {
+            name: "aaa"
+        };*/
+        var a = false;
+        var b = {
+            name: "bbb"
+        };
+        var c = a || b;
+        alert(c.name);
+  2）null:null
+  3) NaN:NaN
+  4)Undefined:undefined
+三、乘法
+ 1.NaN：NaN
+ 2.Infinity * 0 = NaN
+ 3.Infinity *非0 =Infinity
+ 4.非数字型：调用Number（）函数自动转换为数字型，再按以上规则运算
+四、除法
+ 1：NaN：NaN  
+ 2：Infinity/Infinity =NaN
+ 3: 0/0=NaN
+ 4.Infinity/非0 =Infinity
+ 5.非数字型：调用Number（）函数自动转换为数字型，再按以上规则运算
+五、取余 %
+ 1：Infinity%非0=NaN
+ 2：非0%0=NaN
+ 3: Infinity%Infinity=NaN
+ 4.非数字型：调用Number（）函数自动转换为数字型，再按以上规则运算
+六、加法
+ 1：NaN：NaN
+ 2：Infinity+Infinity=Infinity
+ 3：含字符串：拼接
+ 4: 对象，undefined，null：调用toString转换为字符串拼接
+        var a = {
+            name: "ada",
+            toString: function() {
+                return this.name;
+            }
+        };
+        var b = {
+            name: "linda",
+            toString: function() {
+                return this.name;
+            }
+        };
+        var c = a + b;
+        alert(c);
+
+七：减法
+ 1：NaN：NaN 
+ 2：Infinity-Infinity=NaN
+ 3:(-Infinity)-(-Infinity)=NaN
+ 4:Infinity-(-Infinity)=Infinity
+ 5:-Infinity-Infinity=-Infinity
+ 6:字符串，布尔型，undefined，null，自动调用Number()函数转换为数字再运算
+ 7.对象型：调用对象的valueOf方法，转换为数字型，如果转换为NaN，则调用toString方法，按字符串处理
+       var a = {
+            name: "ada",
+            age: 28,
+            toString: function() {
+                return this.name;
+            },
+            valueOf: function() {
+                return this.age;
+            }
+        };
+        var b = {
+            name: "linda",
+            age: 21,
+            toString: function() {
+                return this.name;
+            },
+            valueOf: function() {
+                return this.age;
+            }
+        };
+        var c = a - b;
+        alert(c);
+ 
+八、关系运算：
+  1：数值型，比较数值
+  2：字符串：比较对应(逐一)字符的ASCII码
+       var a = "32";
+        var b = "123";
+        var c = b > a;
+        alert(c);
+  3: 混合型：将非数字型调用Number自动转换为数字比较
+        var a = "a"; //字符a转换为数值NaN NaN和任何数值都不相等，大于小于
+        var b = 12;
+        var c = b > a;
+        alert(c);
+  4.对象型：调用对象的valueOf方法，转换为数字型，如果转换为NaN，则调用toString方法，按字符串处理
+
+
+
+
+
+编程练习：
+
+1.插入元素
+2.排序
+  选择排序
+  冒泡排序
+  插入排序
+
+
+
+3.数组中删除一个元素  [1,2,3,4,5,6]==>[1,2,4,5,6]
+4.打印魔方阵
+  将数字1-9填入3X3的矩阵，使得每行每列对角线的和都为15
+  从第一行中间开始填写，退一行进一列，如果出界换对面，如果被占放下面
+
+5.8个人围成一圈，开始报数，数到3 退出，问最后三个人在什么位置？
+
+
+  
